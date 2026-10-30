@@ -66,8 +66,8 @@ or by name lookup, so no removed class/constant is ever linked:
 * BedWars1058 (teams, spectators) is also accessed reflectively and degrades gracefully if it is missing.
 * `api-version: 1.13` stops modern servers from treating the plugin as legacy; older servers ignore it.
 
-## Known limits
+## Developer note
+This plugin is coded with AI assistance and architected completely by me. Regardless, use at your own risk.
 
-* Per-mob settings live in memory; they are not saved across a server restart (BedWars arenas reset anyway).
-* Not Folia-aware.
-* The 26.x and 1.8 code paths are written defensively but need real-server testing (see below).
+## License
+This plugin is under the MIT License, check the [License](LICENSE) file for more details.

@@ -4,3 +4,5 @@ build/
 *.iml
 out/
 .kotlin/
+gradlew
+gradlew.bat
