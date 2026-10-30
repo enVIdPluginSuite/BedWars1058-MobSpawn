@@ -1,0 +1,23 @@
+name: BedWars1058-MobSpawn
+main: dev.etran.mobspawn.MobSpawnPlugin
+version: ${version}
+# 1.13 is the lowest value that makes modern servers treat this as a non-legacy plugin.
+# Servers older than 1.13 simply ignore the key.
+api-version: '1.13'
+author: etran
+description: Spawn, configure and delete mobs inside BedWars1058 arenas from a GUI.
+depend: [BedWars1058]
+
+commands:
+  mobspawn:
+    description: Open the mob spawner UI and manage mobs.
+    usage: /<command> [spawn|edit|delete|cancel|clear|reload|help]
+    aliases: [mobs, bwmob]
+
+permissions:
+  mobspawn.use:
+    description: Spawn, configure targeting/timers of and delete mobs.
+    default: op
+  mobspawn.admin:
+    description: Edit mob attributes, clear all mobs and reload the config.
+    default: op

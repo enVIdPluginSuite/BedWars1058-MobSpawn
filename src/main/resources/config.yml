@@ -1,0 +1,32 @@
+# BedWars1058-MobSpawn configuration
+
+defaults:
+  # Values a freshly opened spawn menu starts with.
+  map-damage: false        # true = the mob's explosions / block changes DO break the map
+  timer-seconds: 0         # 0 = no despawn timer (the default)
+  target-mode: ALL         # ALL | ENEMIES | NONE   (PLAYER / TEAM are picked in the UI)
+
+access:
+  # Anyone in creative may open the UI, spawn, edit timers/targets and delete mobs.
+  allow-creative: true
+  # Attribute editing needs mobspawn.admin. Set to true to let creative players do it too.
+  creative-can-edit-attributes: false
+
+limits:
+  max-spawn-amount: 20
+  max-timer-seconds: 3600
+  # Entity types nobody may spawn through the plugin, e.g. [WITHER, ENDER_DRAGON]
+  blocked-mobs: []
+
+behaviour:
+  # Seconds the "edit" / "delete" click modes stay armed after running the command.
+  mode-timeout-seconds: 30
+  # Show the remaining time in the mob's name (like the BedWars golems) while a timer runs.
+  show-timer-name: true
+  # How often (ticks) aggressive mobs re-check who they should be attacking.
+  target-scan-interval-ticks: 10
+  # Aggro radius used when the mob has no readable follow-range attribute.
+  default-target-range: 24.0
+  # Let a mob with map damage ON break blocks even if another plugin (e.g. BedWars1058)
+  # cancelled the explosion / block change.
+  override-cancelled-map-damage: true
